@@ -13,6 +13,8 @@ Application Launcher : Rofi
 Powermenu : rofi themed red nord 
 Text Editor : nvim computer
 
+Get the Papirus nord from here : git clone https://github.com/Adapta-Projects/Papirus-Nord.git
+
 Special script added called Swappy see the sxhkdrc file
 
 ctrl + alt + 1
