@@ -13,5 +13,5 @@ Application Launcher : Rofi
 Powermenu : rofi themed red nord 
 Text Editor : nvim computer
 
-Get the Papirus nord from here : git clone https://github.com/Adapta-Projects/Papirus-Nord.git
+Get  Papirus nord icons from here : git clone https://github.com/Adapta-Projects/Papirus-Nord.git
 
