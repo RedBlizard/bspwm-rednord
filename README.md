@@ -1,5 +1,3 @@
-# bspwm-rednord
-bspwm rednord themed
 WM : bspwm
 Shell : fish with aliases included (upall for regular updates and aur updates)
 Terminal : kitty 
