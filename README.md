@@ -1,6 +1,7 @@
 BSPWM REDNORD
 
-![readme](https://user-images.githubusercontent.com/108489214/177019316-4f31932e-eab1-45cf-b942-2dadcf3d8d7e.png)
+
+![Screen Capture_select-area_20220703015732](https://user-images.githubusercontent.com/108489214/177019382-8d142c09-ee09-421e-af19-abfc053cf710.png)
 
 
 
