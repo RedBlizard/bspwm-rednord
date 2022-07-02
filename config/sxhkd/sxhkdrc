@@ -106,7 +106,7 @@ ctrl + alt + o
     ~/.config/bspwm/scripts/picom-toggle.sh      
 
 ######################################################################################################
-# THESE SCRIPTS SWAPS ALL THE SEVEN DESKTOPS OF THE CONNECTED TWO MONITORS AND ALSO SWAPS THEIR NAMES   
+# THESE SCRIPTS SWAPS ALL THE EIGHT DESKTOPS OF THE CONNECTED TWO MONITORS AND ALSO SWAPS THEIR NAMES   
 ######################################################################################################
 
 ctrl + alt + 1
