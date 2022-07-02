@@ -15,28 +15,3 @@ Text Editor : nvim computer
 
 Get the Papirus nord from here : git clone https://github.com/Adapta-Projects/Papirus-Nord.git
 
-Special script added called Swappy see the sxhkdrc file
-
-ctrl + alt + 1
-   ~/.config/bspwm/scripts/swappy1.sh
-   
-ctrl + alt + 2
-   ~/.config/bspwm/scripts/swappy2.sh
-   
-ctrl + alt + 3
-   ~/.config/bspwm/scripts/swappy3.sh   
-   
-ctrl + alt + 4
-   ~/.config/bspwm/scripts/swappy4.sh  
-   
-ctrl + alt + 5
-   ~/.config/bspwm/scripts/swappy5.sh    
-   
-ctrl + alt + 6
-   ~/.config/bspwm/scripts/swappy6.sh   
-   
-ctrl + alt + 7
-   ~/.config/bspwm/scripts/swappy7.sh
-   
-ctrl + alt + 8
-   ~/.config/bspwm/scripts/swappy8.sh 
