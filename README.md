@@ -1,3 +1,5 @@
+BSPWM REDNORD
+
 WM : bspwm
 Shell : fish with aliases included (upall for regular updates and aur updates)
 Terminal : kitty 
