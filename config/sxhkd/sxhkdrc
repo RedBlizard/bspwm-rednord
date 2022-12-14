@@ -14,13 +14,18 @@ super + shift + t
 super + d
     rofi -show drun
     
-# program launcher
+# program launcher rofi beats
 super + b
-     ~/.config/rofi/Rofi-Beats/rofi-beats-linux 
+     ~/.config/rofi/Rofi-Beats/rofi-beats-linux
+
+# rofi network manager
+super + n
+     networkmanager_dmenu &
+           
     
 # program launcher rofi dmenu
 super + r
-    rofi -show drun  -theme d-nord.rasi -font "DejaVu Sans:style=Regular:pixelsize=13;2" -show com
+    rofi -show drun  -theme ~/.config/rofi/dmenu/d-nord.rasi -font "DejaVu Sans:style=Regular:pixelsize=13;2" -show com
 
 # program launcher
 ctrl + super + r
@@ -36,8 +41,8 @@ super + {a,o,t,v}
     {archlinux-betterlockscreen,virtualbox,thunar,variety}  
 
 # Launch Applications
-super + shift + {d,f,w,b,p,r,h,g,m,n,s,v}
-    {dolphin,firefox,whatsapp-for-linux,brave,pamac-manager,kitty -e ranger,kitty -e htop,geany,vlc,nitrogen,xfce4-settings-manager,vivaldi-snapshot}
+super + shift + {d,f,w,b,c,p,r,h,g,m,n,s,v}
+    {dolphin,firefox,whatsapp-for-linux,brave,chromium,pamac-manager,kitty -e ranger,kitty -e htop,geany,vlc,nitrogen,xfce4-settings-manager,vivaldi-snapshot}
 
 #################################################################
 # ALT + ... KEYS
@@ -47,7 +52,11 @@ super + shift + {d,f,w,b,p,r,h,g,m,n,s,v}
    
 # Launch discord
 alt + d
-   discord desktop   
+   discord desktop
+   
+# Launch guvcview
+alt + g
+   guvcview      
    
 #Wallpaper trash
 #alt + t
@@ -59,7 +68,7 @@ alt + d
 
 #wallpaper nitrogen random
 alt + n
-    ~/.config/bspwm/scripts/nitrogen-wallpaper-slide.sh
+    ~/.config/polybar/scripts/nitrogen-wallpaper-slide.sh
 
 #Wallpaper previous
 alt + p
@@ -93,6 +102,10 @@ alt + Down
 # CONTROL + ALT KEYS
 #################################################################
 
+# Xfce4-settings-manager
+ctrl + alt + s
+    xfce4-settings-manager
+
 # konsole terminal
 ctrl + alt + t
     konsole
@@ -103,10 +116,15 @@ ctrl + alt + l
     
 #Picom Toggle
 ctrl + alt + o
-    ~/.config/bspwm/scripts/picom-toggle.sh      
+    ~/.config/bspwm/scripts/picom-toggle.sh 
+
+# Notification center in polybar
+ctrl + alt + n
+    $HOME/.config/polybar/scripts/rofi_notif_center.sh -theme configNotif.rasi
+    
 
 ######################################################################################################
-# THESE SCRIPTS SWAPS ALL THE EIGHT DESKTOPS OF THE CONNECTED TWO MONITORS AND ALSO SWAPS THEIR NAMES   
+# THESE SCRIPTS SWAPS ALL THE SEVEN DESKTOPS OF THE CONNECTED TWO MONITORS AND ALSO SWAPS THEIR NAMES   
 ######################################################################################################
 
 ctrl + alt + 1
@@ -159,9 +177,20 @@ F12
 # CTRL + ALT KEYS
 #################################################################
 
-# Volume controls
-XF86Audio{RaiseVolume,LowerVolume,Mute}
-    volume{ --up, --down, --toggle}
+# Volume settings
+
+# Raises volume
+XF86AudioRaiseVolume
+    amixer set Master 2%+
+
+# Lowers volume
+XF86AudioLowerVolume
+    amixer set Master 2%-
+
+# Mutes
+XF86AudioMute
+#amixer set Master toggle
+    amixer -D pulse set Master 1+ toggle
 
 # Brightness controls
 XF86MonBrightness{Up,Down}
@@ -172,11 +201,11 @@ Print
     ~/.config/bspwm/scripts/screenshot.sh
 
 # screenshot active window
-ctrl + Print
+super + Print
     ~/.config/bspwm/scripts/screenshot_window.sh
 
 # screenshot selected area
-ctrl + shift + Print
+shift + Print
     ~/.config/bspwm/scripts/screenshot_region.sh
 
 #################################################################
@@ -208,7 +237,7 @@ super + alt + {_,shift + }t
 
 # relaunch polybar
 super + alt + p
-	sh $HOME/.config/polybar/scripts/launch-polybar.sh        
+	~/.config/polybar/launch.sh        
 
 # close and kill
 super + c
@@ -287,17 +316,13 @@ super + {o,i}
 # focus or send to the given desktop
 super + {_,shift + }{1-9,0}
 	bspc {desktop -f,node -d} focused:'^{1-9,10}' --follow
-
-# focus or send to the given desktop
-alt + {_,shift + }{1-9,0}
-	bspc {desktop -f,node -d,} focused:'^{1-9,10}' --follow	
 	
 # keep bspwm monitors synced
 ctrl + alt + Right
-    bspc monitor -f DP-0 ; bspc desktop -f next ; bspc monitor -f HDMI-0 ; bspc desktop -f next
+    bspc monitor -f eDP ; bspc desktop -f next ; bspc monitor -f HDMI-A-0 ; bspc desktop -f next
 
 ctrl + alt + Left
-    bspc monitor -f DP-0 ; bspc desktop -f prev; bspc monitor -f HDMI-0 ; bspc desktop -f prev    
+    bspc monitor -f eDP ; bspc desktop -f prev; bspc monitor -f HDMI-A-0 ; bspc desktop -f prev    
     
 # moving windows/nodes between monitors/desktops
 
@@ -382,6 +407,37 @@ super + alt + shift + {h,j,k,l}
 ## Move floating windows
 alt + shift + {Left,Down,Up,Right}
 	bspc node -v {-20 0,0 20,0 -20,20 0}
+	
+#################################################################
+#     BSPWM DYNAMIC TILLING LAYOUTS
+#################################################################	
 
+# Go back through layouts Go back through all (or a custom list of) layouts.
+	
+# Switch to previous layout
+alt + Left
+    bsp-layout previous
 
+# Or to go back through a custom list of layouts
+bsp-layout previous --layouts tall,monocle,wide
 
+# For a specific desktop
+bsp-layout previous --layouts tall,monocle,wide --desktop 4
+
+# Go through layouts Go through all (or a custom list of) layouts.
+
+# Switch to next layout
+alt + Right
+  bsp-layout next
+
+# Or to go through a custom list of layouts
+alt + c
+  bsp-layout next --layouts tall,monocle,wide
+
+# For a specific desktop
+bsp-layout next --layouts tall,monocle,wide --desktop 4
+
+# Toggle layout
+# Toggle between monocle and tall layouts
+alt + l
+  bsp-layout next tall,monocle
