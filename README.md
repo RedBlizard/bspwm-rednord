@@ -1,7 +1,32 @@
 BSPWM REDNORD
 
 
-![Screen Capture_select-area_20220703015732](https://user-images.githubusercontent.com/108489214/177019382-8d142c09-ee09-421e-af19-abfc053cf710.png)
+* Developer RedBlizard
+
+ # This polybar config is for now BSPWM ONLY !!!
+
+ **ttf-nerd-fonts-symbols-2048-em are needed for showing the icons in the bar**
+
+ **how to install the nerd fonts:**
+
+ `yay -S nerd-fonts-complete
+
+ **Place the following in your bspwmrc file**
+
+ ```
+ #LAUNCHERS
+ $HOME/.config/polybar/launch.sh
+
+ #### MONITORS ####
+
+ #  monitors names query
+ bspc query -M --names
+
+ ###This creates and names desktops for multiple monitors.
+ workspaces_multimonitor &
+
+ bspc monitor eDP -d I II III IV V VI VII VIII 
+ bspc monitor HDMI-A-0 -d I II III IV V VI VII VIII 
 
 
 
