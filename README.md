@@ -1,9 +1,9 @@
-BSPWM REDNORD
+# Welcome to BSPWM REDNORD
 
 
 * Developer RedBlizard
 
- # This polybar config is for now BSPWM ONLY !!!
+ # The polybar config is for now BSPWM ONLY !!!
 
  **ttf-nerd-fonts-symbols-2048-em are needed for showing the icons in the bar**
  
