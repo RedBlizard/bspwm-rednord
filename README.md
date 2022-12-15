@@ -6,8 +6,10 @@ BSPWM REDNORD
  # This polybar config is for now BSPWM ONLY !!!
 
  **ttf-nerd-fonts-symbols-2048-em are needed for showing the icons in the bar**
-
- **how to install the nerd fonts:**
+ 
+  **how to install the nerd fonts:**
+  
+  **Get  Papirus nord icons from here : git clone https://github.com/Adapta-Projects/Papirus-Nord.git**
 
  `yay -S nerd-fonts-complete
 
@@ -27,11 +29,11 @@ BSPWM REDNORD
 
  bspc monitor eDP -d I II III IV V VI VII VIII 
  bspc monitor HDMI-A-0 -d I II III IV V VI VII VIII 
+ ```
 
 
 
 
-Get  Papirus nord icons from here : git clone https://github.com/Adapta-Projects/Papirus-Nord.git
 
 ![ScreenShot_2022-12-14_at_01:11:38-AM](https://user-images.githubusercontent.com/108489214/207758310-5e443dd8-c2cb-46c9-bd1d-1c277552a3e8.png)
 
