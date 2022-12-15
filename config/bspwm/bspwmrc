@@ -174,7 +174,7 @@ LXAppearance &
 #caffeine &
 
 ##Wallpaper. Nitrogen just draws wallpaper
-nitrogen --restore &
+sleep 2 && nitrogen --restore &
 
 # start variety
 #variety &
@@ -198,7 +198,7 @@ cp "$XFCE_TERM_PATH"/colorschemes/nord "$XFCE_TERM_PATH"/terminalrc
 
 ##compositing. Required for shadows, transparency and stuff. 
 ##Reduces flicker. Disabling saves resources.
-while pgrep -u $UID -x picom >/dev/null; do sleep 1; done
+while pgrep -u $UID -x picom >/dev/null; do sleep 3; done
 picom --config $HOME/.config/bspwm/picom.conf &
 
 datetime(){
