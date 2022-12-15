@@ -136,10 +136,6 @@ sh ~/.screenlayout/.screenlayout.sh &
 # Kill if already running
 killall -9 picom sxhkd dunst xfce4-power-manager ksuperkey eww caffeine firewall-applet kdeconnect-indicator polkit-gnome-authentication-agent-1 nm-applet
 
-##compositing. Required for shadows, transparency and stuff. 
-##Reduces flicker. Disabling saves resources.
-#picom  &
-
 # Enable Super Keys For Menu
 ksuperkey -e 'Super_L=Alt_L|F1' &
 ksuperkey -e 'Super_R=Alt_L|F1' &
@@ -200,10 +196,10 @@ sed -i "s/theme =.*$/theme = \"norchad\",/g" $HOME/.config/nvim/lua/custom/norch
 XFCE_TERM_PATH="$HOME/.config/xfce4/terminal"
 cp "$XFCE_TERM_PATH"/colorschemes/nord "$XFCE_TERM_PATH"/terminalrc
 
-# start compositor
+##compositing. Required for shadows, transparency and stuff. 
+##Reduces flicker. Disabling saves resources.
 while pgrep -u $UID -x picom >/dev/null; do sleep 1; done
-picom --config $HOME/.config/bspwm/picom.conf &
-
+picom &
 
 datetime(){
     datetime=`date +\ %A\ %B\ %Y\ \|\ \\ %H\:%M`
