@@ -13,27 +13,10 @@
 
  `yay -S nerd-fonts-complete
 
- **Place the following in your bspwmrc file**
 
  ```
- #LAUNCHERS
- $HOME/.config/polybar/launch.sh
-
- #### MONITORS ####
-
- #  monitors names query
- bspc query -M --names
-
- ###This creates and names desktops for multiple monitors.
- workspaces_multimonitor &
-
- bspc monitor eDP -d I II III IV V VI VII VIII 
- bspc monitor HDMI-A-0 -d I II III IV V VI VII VIII 
+** Enjoy the redness !!**
  ```
-
-
-
-
 
 ![ScreenShot_2022-12-14_at_01:11:38-AM](https://user-images.githubusercontent.com/108489214/207758310-5e443dd8-c2cb-46c9-bd1d-1c277552a3e8.png)
 
