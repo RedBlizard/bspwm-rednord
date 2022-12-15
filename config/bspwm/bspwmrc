@@ -199,7 +199,7 @@ cp "$XFCE_TERM_PATH"/colorschemes/nord "$XFCE_TERM_PATH"/terminalrc
 ##compositing. Required for shadows, transparency and stuff. 
 ##Reduces flicker. Disabling saves resources.
 while pgrep -u $UID -x picom >/dev/null; do sleep 1; done
-picom &
+picom --config $HOME/.config/bspwm/picom.conf &
 
 datetime(){
     datetime=`date +\ %A\ %B\ %Y\ \|\ \\ %H\:%M`
