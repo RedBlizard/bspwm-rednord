@@ -3,7 +3,7 @@
 
 * Developer RedBlizard
 
- # The polybar config is for now BSPWM ONLY !!!
+ # The polybar config is for BSPWM and I3 !!!
 
  **ttf-nerd-fonts-symbols-2048-em are needed for showing the icons in the bar**
  
