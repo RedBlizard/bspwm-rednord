@@ -1,4 +1,4 @@
-# Welcome to BSPWM REDNORD
+# Welcome to BSPWM / i3 REDNORD
 
 
 * Developer RedBlizard
