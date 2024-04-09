@@ -35,9 +35,9 @@ rofi_command="rofi -theme $dir/full_rounded"
 
 # Options for powermenu
 lock=""
-logout=""
+logout="󰍃 "
 shutdown=""
-reboot=""
+reboot=" "
 suspend=""
 
 # Confirmation

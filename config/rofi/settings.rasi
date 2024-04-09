@@ -22,10 +22,11 @@ window {
     border-radius:           8px;
     border-color:     #0000004A;
     padding:          30;
+    width: 600px;
 }
 listview {
-    lines:                          10;
-    columns:                        3;
+    lines:                          6;
+    columns:                        1;
 }
 mainbox {
     border:  0;
