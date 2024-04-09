@@ -177,43 +177,6 @@ label-disconnected = "%{A1:networkmanager_dmenu &:}Offline%{A}"
 label-packetloss = Packetloss " "
 label-packetloss-foreground = ##B48EAD
 
-
-[module/network]
-type = internal/network
-interface = enp3s0
-;interface = wlan0
-interval = 3.0
-accumulate-stats = true
-unknown-as-up = true
-; Available tokens:
-;   %ifname%    [wireless+wired]
-;   %local_ip%  [wireless+wired]
-;   %essid%     [wireless]
-;   %signal%    [wireless]
-;   %upspeed%   [wireless+wired]
-;   %downspeed% [wireless+wired]
-;   %linkspeed% [wired]
-;   Default: %ifname% %local_ip%
-label-connected ="%{A1:networkmanager_dmenu &:}%{F#A3BE8C}%downspeed%%{A} %{F#A3BE8C}%upspeed%%{A}"
-;label-connected = "Connected "
-label-disconnected ="%{A1:networkmanager_dmenu &:}%{F#BF616A} %{A}"
-format-background = ${colors.background-alt}
-format-connected-foreground = ${colors.green}
-format-connected-background = ${colors.background-alt}
-format-connected-underline = 
-format-connected-prefix = " "
-format-connected-prefix-foreground = ${colors.green}
-format-connected-prefix-background = ${colors.background-alt}
-format-disconnected = <label-disconnected>
-format-disconnected-prefix = "  "
-format-disconnected-prefix-font = 2
-format-disconnected-prefix-foreground = ${color.red}
-format-disconnected-foreground = ${color.red}
-format-disconnected-background = ${colors.background-alt}
-label-packetloss = Packetloss " "
-label-packetloss-foreground = #B48EAD
-format-padding = 
-
 ###########################################################
 
 [module/nm-launcher]

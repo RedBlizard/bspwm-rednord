@@ -7,7 +7,7 @@ if ! updates_arch=$(checkupdates 2> /dev/null | wc -l ); then
 fi
 
 # if ! updates_aur=$(cower -u 2> /dev/null | wc -l); then
-if ! updates_aur=$(paru -Qu | wc -l); then
+if ! updates_aur=$(yay -Qua --noconfirm | wc -l); then
     updates_aur=0
 fi
 
@@ -18,7 +18,3 @@ if [ "$updates" -gt 0 ]; then
 else
     echo " 0"
 fi
-
-
-
-

@@ -4,7 +4,7 @@ BAR_HEIGHT=28
 BORDER_SIZE=1
 YAD_WIDTH=300
 YAD_HEIGHT=188
-DATE="$(date +"%a %d %H:%M")"
+DATE=" $( date +"%D  %H:%M")"
 
 case "$1" in
 --popup)
