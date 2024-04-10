@@ -136,7 +136,7 @@ element-text {
 element normal.urgent,
 element alternate.urgent {
     background-color: @urgent;
-    text-color: #d8dee9;
+    text-color: #FD807E;
     border-radius: 9px;
 }
 
@@ -148,12 +148,12 @@ element alternate.active {
 
 element selected {
     background-color: #8358E1;
-    text-color: #2a2e36;
+    text-color: #FD807E;
 }
 
 element selected.urgent {
     background-color: @urgent-selected;
-    text-color: #d8dee9;
+    text-color: #FD807E;
 }
 
 element selected.active {

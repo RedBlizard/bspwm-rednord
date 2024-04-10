@@ -69,7 +69,7 @@ element.normal.active {
 }
 element.selected.normal {
     background-color: #8358E1;
-    text-color:       #2a2e36;
+    text-color:       #FD807E;
 }
 element.selected.urgent {
     background-color: @selected-urgent-background;
